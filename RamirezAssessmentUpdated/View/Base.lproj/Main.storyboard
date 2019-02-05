@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J1P-b9-WW1">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SupervillainVC-->
+        <scene sceneID="q87-d9-hGT">
+            <objects>
+                <viewController id="J1P-b9-WW1" customClass="SupervillainVC" customModule="RamirezAssessmentUpdated" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A3i-q3-l8H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tIT-Qg-2To">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Nd-nc-cBA">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <items>
+                                            <navigationItem title="Supervillain List" id="Rp3-xQ-sAy">
+                                                <barButtonItem key="leftBarButtonItem" title="Shuffle" id="tGi-WA-KOd">
+                                                    <connections>
+                                                        <action selector="shuffleButtonTapped:" destination="J1P-b9-WW1" id="dDo-tx-jsz"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                                <barButtonItem key="rightBarButtonItem" systemItem="add" id="a1X-gd-tes">
+                                                    <connections>
+                                                        <action selector="addButtonTapped:" destination="J1P-b9-WW1" id="izB-yD-xRQ"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WxP-oW-fTy">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="603"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="supervillainCell" id="fO9-lX-yNz">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fO9-lX-yNz" id="5ll-uH-Ngf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tIT-Qg-2To" firstAttribute="leading" secondItem="A3i-q3-l8H" secondAttribute="leading" id="1GP-iP-DSS"/>
+                            <constraint firstItem="tIT-Qg-2To" firstAttribute="width" secondItem="A3i-q3-l8H" secondAttribute="width" id="96Z-PD-2Bt"/>
+                            <constraint firstItem="tIT-Qg-2To" firstAttribute="top" secondItem="LSZ-8s-Xbf" secondAttribute="top" id="g3A-Yh-3Df"/>
+                            <constraint firstItem="tIT-Qg-2To" firstAttribute="bottom" secondItem="LSZ-8s-Xbf" secondAttribute="bottom" id="ubs-Wg-Lqh"/>
+                            <constraint firstItem="1Nd-nc-cBA" firstAttribute="width" secondItem="A3i-q3-l8H" secondAttribute="width" id="zux-aN-YME"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LSZ-8s-Xbf"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="WxP-oW-fTy" id="DbX-7D-hSn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T4H-8S-eLg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="225.33733133433284"/>
+        </scene>
+    </scenes>
+</document>
